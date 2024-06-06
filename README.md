@@ -18,7 +18,7 @@ At least one empty line at the end of file.
 - Param in the header are read to initialise the generator;
 - Period and frequency must be consistent;
 - Period is the duration of the generated voltage table. If only one cycle sine is present, then this gives directly the frequency;
-- Amp is the expected pk-pk amplitude.
+- Amp is the expected pk-pk amplitude;
 - Behavioir is strange putting table with more than 0.647 V give a clipped waveform. This is why I max out at +-0.312 V in the table.
   
 # How to run
