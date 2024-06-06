@@ -23,6 +23,8 @@ PERIOD = 1/FREQ;
 t = 0:(1/(N-1)):1;
 y = 0.5*sin(2*pi*t)';
 plot(t,y)
+xlabel('Time [s]')
+ylabel('Voltage [V]')
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Name of the CSV file that will be generated
@@ -37,7 +39,7 @@ fileID = fopen('output.csv','w');
 fprintf(fileID,'RIGOL:DG1:CSV DATA FILE\n');
 fprintf(fileID,'TYPE:Arb\n');
 fprintf(fileID,'AMP:%.3f Vpp\n',AMP);
-fprintf(fileID,'PERIOD:%.3f S\n',PERIOD);
+fprintf(fileID,'PERIOD:%.3e S\n',PERIOD);
 fprintf(fileID,'DOTS:8192\n');
 fprintf(fileID,'MODE:Freq\n');
 fprintf(fileID,'AFG Frequency:%.3f\n',FREQ);
